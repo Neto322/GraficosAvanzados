@@ -41,3 +41,12 @@ Route::get("/usuarios/{id}",function ($id)
 {
     return "Aqui se muestra la informacion del usuario: " . $id;
 });
+
+Route::get("/bienvenida/{nombre}", function($nombre = "usuario")
+{
+    $respuesta = "Bienvenido";
+
+    $respuesta .= "" . $nombre;
+
+    return $respuesta;
+});
